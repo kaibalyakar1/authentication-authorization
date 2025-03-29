@@ -1,17 +1,16 @@
 {
   "name": "auth",
   "version": "1.0.0",
-  "description": "authentication&authorization",
+  "description": "authentication & authorization",
   "license": "ISC",
   "author": "kk",
   "type": "commonjs",
   "main": "server.js",
   "scripts": {
-  "build": "npm ci",
-  "start": "node server.js",
-  "dev": "nodemon server.js"
-}
-
+    "build": "npm ci",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cloudinary": "^2.6.0",
