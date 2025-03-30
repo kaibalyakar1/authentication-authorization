@@ -7,13 +7,13 @@ const cloudinaryRoutes = require("./routes/cloudinary.routes");
 const app = express();
 app.use(express.json()); // Enables JSON parsing in requests
 app.use(express.urlencoded({ extended: true }));
-
+const PORT = process.env.PORT || 3000;
 app.use("/api/user", userRoutes);
 app.use("/api/cloudinary", cloudinaryRoutes);
 const start = async () => {
   try {
     await connectDb();
-    app.listen(8080, () => {
+    app.listen(PORT, () => {
       console.log("Server is running on port 3000");
     });
   } catch (error) {
