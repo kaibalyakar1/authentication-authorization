@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json()); // Enables JSON parsing in requests
 app.use(express.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 3000;
-application.use("api/nginx-test", (req, res) => {
+application.use("/api/nginx-test", (req, res) => {
   return res.status(200).json({ message: "Hello from Nginx!" });
 });
 app.use("/api/user", userRoutes);
