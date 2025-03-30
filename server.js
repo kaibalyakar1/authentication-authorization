@@ -8,6 +8,7 @@ const app = express();
 app.use(express.json()); // Enables JSON parsing in requests
 app.use(express.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 3000;
+application.use("api/nginx-test", (req, res) => res.send("OK"));
 app.use("/api/user", userRoutes);
 app.use("/api/cloudinary", cloudinaryRoutes);
 const start = async () => {
